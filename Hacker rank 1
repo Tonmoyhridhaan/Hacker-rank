@@ -1,0 +1,32 @@
+#include<stdio.h>
+main()
+{
+    int arr[101],n,i,sum;
+    int c[101] ={0};
+    while(scanf("%d",&n)==1)
+    {
+        for(i=0;i<n;i++)
+        {
+            scanf("%d",&arr[i]);
+            c[arr[i]]++;
+        }
+        sum=0;
+        for(i=0;i<101;i++)
+        {
+            if(c[i]==1)
+            {
+                c[i]=0;
+                continue;
+            }
+            if(c[i]!=0)
+            {
+                sum+=c[i]/2;
+                c[i]=0;
+            }
+
+        }
+        printf("%d\n",sum);
+    }
+
+    return 0;
+}
