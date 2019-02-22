@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+main()
+{
+    string s;
+    long long int n,t,p;
+    int cnt,i,b;
+    cnt = 0;
+    cin>>s;
+    cin>>n;
+    t=n;
+    for(i=0;i<s.size();i++)
+    {
+        if(s[i]=='a') cnt++;
+    }
+    p = n/s.size();
+    t = p*cnt;
+    b = n%s.size();
+    for(i=0;i<b;i++)
+    {
+        if(s[i]=='a')t++;
+    }
+    cout<<t<<"\n";
+    s.clear();
+
+}
