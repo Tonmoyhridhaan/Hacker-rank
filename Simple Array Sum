@@ -1,0 +1,15 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t,i,sum=0;
+    cin>>t;
+    int arr[t];
+    for(i=0;i<t;i++)
+    {
+        cin>>arr[i];
+        sum+=arr[i];
+    }
+    cout<<sum<<endl;
+return 0;
+}
