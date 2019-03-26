@@ -1,0 +1,22 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n,i;
+    float poscnt=0,negcnt=0,zercnt=0;
+    cin>>n;
+
+    int arr[n];
+
+    for(i=0;i<n;i++)
+    {
+        cin>>arr[i];
+        if(arr[i]>0) poscnt++;
+        else if(arr[i]<0) negcnt++;
+        else zercnt++;
+    }
+
+    printf("%f\n%f\n%f",poscnt/n,negcnt/n,zercnt/n);
+   return 0;
+
+}
