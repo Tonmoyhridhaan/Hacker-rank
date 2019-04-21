@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n,i;
+    cin>>n;
+    long int a,mx,mn;
+    int cntmx=0,cntmn=0;
+    cin>>a;
+    mx = mn = a;
+    for(i=0;i<n-1;i++)
+    {
+        cin>>a;
+        if(a>mx)
+        {
+            mx = a;
+            cntmx++;
+        }
+        if(a<mn)
+        {
+            mn = a;
+            cntmn++;
+        }
+
+    }
+    cout<<cntmx<<" "<<cntmn;
+
+return 0;
+}
