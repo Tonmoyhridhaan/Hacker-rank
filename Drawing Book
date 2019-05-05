@@ -1,0 +1,13 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n,p,tmp;
+    cin>>n>>p;
+    tmp = p/2;
+    if(p%2==1 && (p+1)==n) p = 1;
+    else p = (n-p)/2;
+    cout<<min(tmp,p);
+
+return 0;
+}
