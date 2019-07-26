@@ -1,0 +1,36 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int b,n,m,i,j;
+    bool fg = false;
+    cin>>b;
+    cin>>n;
+    cin>>m;
+    long long int key[1000],drive[1000];
+    for( i = 0; i<n ; i++)
+    {
+        cin>>key[i];
+    }
+    int mx = 0;
+    for(i = 0 ; i<m ; i++)
+    {
+        cin>>drive[i];
+        for(j = 0; j<n ; j++)
+        {
+            if((drive[i]+key[j])<=b && (drive[i]+key[j])>mx)
+            {
+                mx = drive[i]+key[j];
+                if(fg == false)
+                {
+                    fg = true;
+                }
+            }
+        }
+
+    }
+
+    if(fg) cout<<mx;
+    else cout<<"-1";
+return 0;
+}
