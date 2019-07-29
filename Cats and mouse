@@ -1,0 +1,19 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define sf scanf
+#define pf printf
+int main()
+{
+    int x,y,z,n;
+    sf("%d",&n);
+    while(n--)
+    {
+        sf("%d%d%d",&x,&y,&z);
+        if(abs(x-z)>abs(y-z)) pf("Cat B\n");
+        else if(abs(y-z)>abs(x-z)) pf("Cat A\n");
+        else pf("Mouse C\n");
+    }
+
+    return 0;
+
+}
