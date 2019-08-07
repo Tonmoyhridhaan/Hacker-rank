@@ -1,0 +1,35 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define pb push_back
+#define i64 long long int
+#define sf scanf
+#define pf printf
+int main()
+{
+    int n,i,j;
+    vector<int>v;
+    sf("%d",&n);
+    int a;
+    for( i = 0 ; i<n ; i++)
+    {
+        cin>>a;
+        v.pb(a);
+    }
+
+    sort(v.begin(),v.end());
+    int mx = 0;
+    for( i = 0 ;i<n ; i++)
+    {
+        for(j = i+1 ; j<n ; j++)
+        {
+            if((v[j] - v[i])<0 || (v[j] - v[i])>1)
+            {
+                break;
+            }
+        }
+        a  = j-i;
+        if(a>mx) mx = a;
+    }
+    cout<<mx;
+return 0;
+}
