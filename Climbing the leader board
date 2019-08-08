@@ -1,0 +1,53 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define pb push_back
+#define i64 long long int
+#define sf scanf
+#define pf printf
+int main()
+{
+    int n1,n2,i,j,sz1;
+    cin>>n1;
+    int a;
+    vector <int> v;
+    cin>>a;
+    v.pb(a);
+    for(i = 0 ; i<n1-1 ; i++)
+    {
+        cin>>a;
+        if(v[v.size()-1] != a)
+        {
+            v.pb(a);
+        }
+    }
+
+    sz1 = v.size();
+    cin>>n2;
+    j = sz1-1;
+    for(i = 0 ; i<n2 ; i++)
+    {
+        cin>>a;
+
+        while(j>=-1)
+        {
+            if(j == -1)
+            {
+                cout<<"1"<<"\n";
+                break;
+            }
+            else if(a<v[j])
+            {
+                cout<<j+2<<"\n";
+                break;
+            }
+            else if(a == v[j])
+            {
+                cout<<j+1<<"\n";
+                break;
+            }
+            else j--;
+        }
+    }
+
+return 0;
+}
